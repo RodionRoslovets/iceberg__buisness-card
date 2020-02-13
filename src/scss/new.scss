@@ -1,0 +1,395 @@
+@import './mixins.scss';
+@import './fonts.scss';
+
+$blue:#0744f5;
+$green:#3acb07;
+$button-shadow: 0px 4px 9.5px 0.5px rgba(41, 32, 29, 0.5);
+$grey: #e9e9e9;
+
+html{    
+    overflow-x: hidden;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size:20px;
+    color:#000;
+    background: #fff;
+    @include borderedBox;
+    @include noIndent;
+    padding-bottom: 20px;
+    @media screen and(max-width:1200px){
+        font-size:18px;
+    }
+    @media screen and(max-width:991px){
+        font-size:16px!important;
+    }
+}
+p{
+    @include noIndent;
+}
+
+/* хедер*/
+
+header{
+    background:$grey;
+    padding:10px 0;
+}
+
+.logo{
+    @include flex(center, center);
+    & img{
+        width: 100%;
+    }
+}
+.work-hours{
+    font-size: 24px;
+    @include flex(center, center);
+    @media screen and(max-width:1200px){
+        font-size:20px;
+    }
+    @media screen and(max-width:991px){
+        font-size:15px!important;
+    }
+    @media screen and(max-width:767px){
+        display: none;
+    }
+}
+.phones{
+    & p{
+        text-align: center;
+        line-height: 40px;
+        & a{
+            color:inherit;
+            font-size: 24px;
+            text-decoration: none;
+            @media screen and(max-width:1200px){
+                font-size:20px;
+            }
+            @media screen and(max-width:991px){
+                font-size:16px;
+            }
+        }
+    }
+    @media screen and(max-width:767px){
+        display: none;
+    }
+}
+.address{
+    & p{
+        text-align: center;
+        line-height: 25px;
+    }
+    @media screen and(max-width:767px){
+        display: none;
+    }
+}
+.contacts-icon{
+    text-align: right;
+    & img{
+        width: 40%;
+    }
+    @media screen and(min-width:768px){
+        display: none;
+    }
+}
+
+/* Контент */
+
+main{
+    background: url('../img/bg1.png') no-repeat 67% 186px,
+        url('../img/bg2.png') no-repeat 29% 492px,
+        url('../img/bg3.png') no-repeat 100% 575px,
+        url('../img/bg4.png') no-repeat 0px 704px;
+        @media screen and(max-width:767px){
+            background: url('../img/bg1.png') no-repeat 100% 80px,
+            url('../img/bg2.png') no-repeat 29% 525px,
+            url('../img/bg3.png') no-repeat 100% 874px;
+        }
+}
+
+.main-heading{
+    text-align: center;
+    margin-bottom: 30px;
+    & h1{
+        font-size: 48px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        @media screen and(max-width:1200px){
+            font-size:40px;
+        }
+        @media screen and(max-width:991px){
+            font-size:32px;
+        }
+    }
+    & .sub-heading{
+        color:$blue;
+        font-size: 24px;
+        text-transform: uppercase;
+        @media screen and(max-width:1200px){
+            font-size:20px;
+        }
+        @media screen and(max-width:991px){
+            font-size:16px;
+        }
+    }
+}
+
+.advantages{
+    margin-bottom: 50px;
+    & img{
+        width: 100%;
+        border-radius: 30px;
+    }
+    &__text{
+        text-align: center;
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 40px;
+        @media screen and(max-width:1200px){
+            font-size:16px;
+        }
+        @media screen and(max-width:991px){
+            font-size:14px;
+        }
+        & span{
+            color:$blue;
+            font-size:24px;
+            display: block;
+            width:111%;
+            margin-left: -15px;
+            @media screen and(max-width:1200px){
+                font-size:20px;
+                width: 112%;
+            }
+            @media screen and(max-width:991px){
+                font-size:16px;
+                width:116%;
+            }
+        }
+    }
+    & .advantage{
+        align-self: flex-end;
+    }
+    @media screen and(max-width:767px){
+        margin-bottom: 20px;
+    }
+}
+
+.button{
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: $button-shadow;
+    position: relative;
+    top:0;
+    margin-top: 40px;
+    @include transition;
+    &__green{
+        background:$green;
+    }
+    &__blue{
+        background:$blue;
+    }
+    & a{
+        display: block;
+        height: inherit;
+        width: 100%;
+    }
+    & button{
+        border:none;
+        padding: 23px 0px;
+        cursor: pointer;
+        font-family: inherit;
+        font-size:inherit;
+        color:#fff;
+        background:transparent;
+        &:focus{
+            outline:none;
+        }
+    }
+    &:active{
+        top:3px;
+        box-shadow: 0px 1px 5.5px 0.5px rgba(41, 32, 29, 0.5);
+    }
+}
+
+.brands{
+    text-align: center;
+    font-size: 26px;
+    @media screen and(max-width:1200px){
+        font-size:20px;
+    }
+    @media screen and(max-width:991px){
+        font-size:16px;
+    }
+}
+
+.master-call{
+    text-align: center;
+    font-size: 26px;
+    color:$blue;
+    margin-top: 30px;
+    @media screen and(max-width:1200px){
+        font-size:20px;
+    }
+    @media screen and(max-width:991px){
+        font-size:16px;
+    }
+}
+
+.lower-advantages{
+    text-align: center;
+    &__heading{
+        margin-bottom: 20px;
+    }
+    & .video{
+        height:263px;
+        @media screen and(max-width:1200px){
+            height:216px;
+        }
+        @media screen and(max-width:991px){
+            height:180px;
+        }
+    }
+    &__photo img{
+        width: 100%;
+    }
+    & .col-md-2{
+        align-self: center;
+    }
+}
+
+.advantage-mobile{
+    margin-top: 30px;
+    font-size: 24px;
+    color:$blue;
+    text-align: center;
+    & img{
+        margin: 20px 0;
+    }
+    & .button{
+        margin: 0 0 20px 0;
+        font-size:16px;
+    }
+    &__text-small{
+        margin-top: 20px;
+        font-size: 20px;
+    }
+}
+
+.mobile-contacts{
+    width: 100%;
+    background: $grey;
+    padding: 10px 15px;
+    position: absolute;
+    left:-100%;
+    z-index: 99;
+    font-size:20px;
+    @include transition;
+    & p{
+        margin-bottom:15px;
+    }
+    & a{
+        color:#000;
+        text-decoration: none;
+    }
+    &__close{
+        position:absolute;
+        right:15px;
+        top:0;
+        font-size: 40px;
+    }
+    &.mobile-contacts__visible{
+        left:0;
+    }
+}
+
+.overlay{
+    background:rgba(0,0,0,.5);
+    opacity: 0;
+    width:100%;
+    height:100vh;
+    @include flex(center, center);
+    display:none;
+    position:fixed;
+    top:0;
+    z-index: 999999;
+    @include transition;
+    &.overlay__visible{
+        opacity: 1;
+    }
+}
+
+.call-form{
+    background:$grey;
+    width: 500px;
+    height:300px;
+    padding: 15px;
+    font-size:24px;
+    position:relative;
+    & .close-form{
+        position: absolute;
+        top:0;
+        right:15px;
+        font-size:24px;
+        cursor: pointer;
+    }
+    & form{
+        @include flex(space-between, stretch);
+        flex-direction:column;
+        height: 100%;
+    }
+    & .form-heading{
+        text-align: center;
+        font-size:26px;
+    }
+    & .form-input{
+        border-bottom: 1px solid #000;
+        & input{
+            background:transparent;
+            border:none;
+            width:100%;
+            padding:10px;
+            font-family:inherit;
+            font-size:inherit;
+            &:focus{
+                outline:none;
+            }
+        }
+    }
+    & .form-submit{
+        & input{
+            border:none;
+            background:$blue;
+            padding:10px 0;
+            width:100%;
+            color:#fff;
+            font-size:inherit;
+            border-radius:15px;
+            box-shadow: $button-shadow;
+            position: relative;
+            top:0;
+            @include transition;
+            &:focus{
+                outline:none;
+            }
+            &:active{
+                top:3px;
+                box-shadow: 0px 1px 5.5px 0.5px rgba(41, 32, 29, 0.5);
+            }
+        }
+    }
+    @media screen and (max-width:767px){
+        margin-left:10px;
+        margin-right:10px;
+    }
+}
+
+
+.row{
+    @media screen and(max-width:991px){
+        margin-left: 0;
+        margin-right:0;
+    }
+}

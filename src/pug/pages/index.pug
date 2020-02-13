@@ -1,0 +1,101 @@
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title Ремонт телевизоров в Алматы
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap-grid.min.css")
+	body
+		.mobile-contacts
+			.mobile-contacts__close x
+			p
+				a(href="tel:+77788701336") 8(778)870-13-36
+				br
+				a(href="tel:+77273440017") 8(727)344-00-17
+			p Пн-Вс с 9:00 до 19:00
+			p ул. Карасай Батыра 185(между Ауэзова и Жарокова)
+		header
+			.container-lg.container-fluid
+				.row
+					.col-6.col-md-3.logo
+						img(src="./assets/img/logo.png", alt="logo")
+					.col-md-3.work-hours
+						p Пн-Вс с 9:00 до 19:00
+					.col-md-3.phones
+						p
+							a(href="tel:+77788701336") 8(778)870-13-36
+							br
+							a(href="tel:+77273440017") 8(727)344-00-17
+					.col-md-3.address
+						p ул. Карасай Батыра 185(между Ауэзова и Жарокова)
+					.col-6.contacts-icon
+						img(src="./assets/img/menu.png", alt="")
+		main
+			.container-lg.container-fluid
+				.main-heading
+					h1 Ремонт телевизоров в Алматы
+					p.sub-heading С честной гарантией до 12 месяцев
+				.row.advantages
+					.col-md-3.advantage.d-none.d-md-block
+						p.advantages__text
+							span Выезд телемастера
+							| по Алматы бесплатно
+							br 
+							| Всегда в наличии запчасти
+						.advantages__photo
+							img(src="./assets/img/master2.jpg", alt="master2")
+					.col-md-6.order-0.order-md-0.align-self-md-end
+						.advantages__photo
+							img(src="./assets/img/master1.jpg", alt="master1")
+					.col-md-3.advantage.d-none.d-md-block
+						p.advantages__text
+							span Бесплатная диагностика
+							| Ремонт любой сложности
+							br 
+							| На дому и в сервисе
+						.advantages__photo
+							img(src="./assets/img/master3.jpg", alt="master3")
+					.col-md-4.offset-md-4
+						.button.button__green
+							a(href="https://api.whatsapp.com/send?phone=77018030005&text=У меня вопрос по ремонту")
+								button Написать в Whatsapp
+					.advantage-mobile.d-md-none
+						p Выезд телемастера по Алматы бесплатно
+						img(src="./assets/img/master2.jpg", alt="master2")
+						.button.button__blue.call-master
+							button Вызвать телемастера
+						p Бесплатная диагностика
+						p.advantage-mobile__text-small Работаем в праздники и выходные
+				.brands.d-none.d-md-block
+					p LG Sony Samsung Philips Toshiba Vestel Haier Yasin
+				.master-call.d-none.d-md-block
+					p Выезд телемастера в течении часа
+						br
+						| (по г.Алматы)
+				.row.lower-advantages
+					.col-md-5.lower-advantages__video
+						p.lower-advantages__heading Больше информации в видео
+						.video
+							iframe( width="100%" height="100%" src="https://www.youtube.com/embed/ot-BidP5cn0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+					.col-md-2.d-none.d-md-block
+						.button.button__blue.call-master
+							button Вызвать
+					.col-md-5.lower-advantages__photo.d-none.d-md-block
+						p.lower-advantages__heading Работаем в праздники и выходные
+						img(src="./assets/img/master2-2.jpg", alt="master2")
+					.col-12.d-md-none
+						.button.button__blue
+							a(href="tel:+77788701336")
+								button Консультация по телефону
+		.overlay
+			.call-form
+				.close-form x
+				form
+					.form-heading
+						p Вызов телемастера
+					.form-input
+						input(type="text" name="name" placeholder="Ваше имя")
+					.form-input
+						input(type="text" name="email" placeholder="Ваш телефон")
+					.form-submit
+						input(type="submit" value="Вызвать телемастера")
